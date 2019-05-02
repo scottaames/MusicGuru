@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Page Demo</title>
+  <script src="public/2b-register.js"></script>
+  <link rel="stylesheet" type="text/css" href="public/2c-register.css">
+</head>
+<body>
+  <form onsubmit="return register();">
+    <h3>REGISTRATION FORM</h3>
+    <label>Name: </label>
+    <input type="text" id="user_name" placeholder="Full name" required autofocus value="John Doe"><br>
+    <label>Email: </label>
+    <input type="email" id="user_email" placeholder="Email" required value="john@doe.com"><br>
+    <label>Password: </label>
+    <input type="password" id="user_password" placeholder="Password" required value="12345"><br>
+    <label>Confirm Password: </label>
+    <input type="password" id="user_cpassword" placeholder="Confirm Password" required value="12345"><br>
+    <input type="submit" value="Register"/>
+  </form>
+</body>
+</html>

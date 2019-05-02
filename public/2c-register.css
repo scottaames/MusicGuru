@@ -1,0 +1,15 @@
+html, body {
+  font-family: arial;
+}
+input {
+  margin: 5px;
+}
+input[type=text], input[type=email], input[type=password] {
+  padding: 5px;
+}
+input[type=submit] {
+  padding: 10px;
+  background: #a32231;
+  border: 0;
+  color: #fff;
+}

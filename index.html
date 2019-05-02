@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <title>MusicGuru</title>
+
+    <link rel="icon" href="/img/logo/MG-logo.png">
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="">
+    <meta name="keywords" content="as3324 nau cs212">
+    <meta name="author" content="Adam Schilperoort | professional programmer and website developer">
+    <!-- <meta name="google-site-verification" content="02d0b66dbb181201"> -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap Css -->
+    <link href="bootstrap-assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Style -->
+    <link href="plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="plugins/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="plugins/owl-carousel/owl.transitions.css" rel="stylesheet">
+    <link href="plugins/Lightbox/dist/css/lightbox.css" rel="stylesheet">
+    <link href="plugins/Icons/et-line-font/style.css" rel="stylesheet">
+    <link href="plugins/animate.css/animate.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- Icons Font -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style>
+      table.greenTable {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #1DB954;
+        width: 100%;
+        text-align: center;
+      }
+      table.greenTable td, table.greenTable th {
+        border: 2px solid #FFFFFF;
+        padding: 3px 0px;
+      }
+      table.greenTable tbody td {
+        font-size: 13px;
+        font-weight: bold;
+        color: #FFFFFF;
+      }
+      table.greenTable tr:nth-child(even) {
+        background: #2dde6c;
+        color: #1DB954;
+      }
+      table.greenTable thead {
+        background: #24943A;
+        background: -moz-linear-gradient(top, #5baf6b 0%, #3a9e4d 66%, #24943A 100%);
+        background: -webkit-linear-gradient(top, #5baf6b 0%, #3a9e4d 66%, #24943A 100%);
+        background: linear-gradient(to bottom, #5baf6b 0%, #3a9e4d 66%, #24943A 100%);
+        border-bottom: 0px solid #442D19;
+      }
+      table.greenTable thead th {
+        font-size: 19px;
+        font-weight: bold;
+        color: #ffffff;
+        text-align: center;
+        border-left: 2px solid #24943A;
+      }
+      table.greenTable thead th:first-child {
+        border-left: none;
+      }
+
+      table.greenTable tfoot td {
+        font-size: 13px;
+      }
+      table.greenTable tfoot .links {
+        text-align: right;
+      }
+      table.greenTable tfoot .links a{
+        display: inline-block;
+        background: #FFFFFF;
+        color: #24943A;
+        padding: 2px 8px;
+        border-radius: 5px;
+      }
+      .spotify-button {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        color: #FFFFFF;
+        background-color: #1DB954;
+        border-color: #ccc;
+    }
+
+    .spotify-button:hover{
+        color: white;
+        background-color: #000000;
+        border-color: #adadad;
+        }
+      }
+    </style>
+</head>
+<body width = "device-width">
+    <!-- Preloader
+	============================================= -->
+    <div class="preloader"><i class="fa fa-circle-o-notch fa-spin fa-2x"></i></div>
+    <!-- Header
+	============================================= -->
+   <section class="main-header">
+       <nav class="navbar navbar-default navbar-fixed-top">
+           <div class="container">
+               <div class="navbar-header">
+                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                       <span class="sr-only">Toggle navigation</span>
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                   </button>
+                 <div class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+                      <input class="searchbar" type="text" placeholder="Search">
+                 </div>
+
+                   <!-- <a class="navbar-brand" href="#"><img src="img/logo/evensmaller.png" class="img-responsive" alt="logo"></a> -->
+               </div>
+               <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
+                   <div class="col-md-4 col-xs-4 nav-wrap">
+                       <ul class="nav navbar-nav">
+                             <li><a href="index.html" class="page-scroll"> <span class="glyphicon glyphicon-home"></span> Home </a></li>
+                             <li><a href="Playlists.html" class="page-scroll"><span class="glyphicon glyphicon-th-list"></span> Library </a></li>
+                             <li><a href="Profile.html" class="page-scroll"><span class="glyphicon glyphicon-user"></span> Profile </a></li>
+                       </ul>
+                   </div>
+                   <div class="social-media hidden-xs">
+                        <form class ="search" action="/action_page.php">
+                             <input type="text" placeholder="Search" name="search2">
+                             <button id="searchButton" type="submit"><i class="fa fa-search"></i></button>
+                       </form>
+                   </div>
+               </div>
+           </div>
+
+       </nav>
+       <div id="owl-hero" class="owl-carousel owl-theme">
+
+   </section>
+
+    <!-- Welcome
+	============================================= -->
+    <section id="welcome">
+      <div class="pre-login-message">
+        <img src="img/logo/MG-logo.png" height="20%" width="20%"/>
+        <h2> Welcome to MusicGuru! </h2>
+        <h4> You're seconds away from hearing great new music tailored to your musical taste.
+          <br> Please head to the <a class="spotify-button" href="login.php"> login page</a> to link your Spotify account and you'll be on your way to better music.</h4>
+
+      </div>
+        <div class="container post-login-message" style="display: none">
+            <br>
+            <h3><b>1.</b> Click "Get Top Tracks" to see your most played songs on Spotify. <br><br>
+              <b>2.</b> Check the box of the song(s) you like the most <br><br>
+              <b>3.</b> Hit the "Get Recommendations" button to see our suggestions <br><br>
+            <hr class="sep">
+
+<!--
+                      <p id = spotifyTrack>
+                      </p>
+          <script>
+                var iframe= document.createElement('iframe');
+                iframe.src= 'https://open.spotify.com/embed/track/11IzgLRXV7Cgek3tEgGgjw';
+                iframe.width=iframe.height= 300;
+                iframe.frameborder=0;
+                iframe.allowtransparency= true;
+                iframe.allow= encrypted-media;
+                document.getElementById('spotifyTrack').appendChild(iframe);
+             // var trackID = 11IzgLRXV7Cgek3tEgGgjw
+            //  document.write(' <iframe id="spotifyTrack" src="https://open.spotify.com/embed/track/11IzgLRXV7Cgek3tEgGgjw" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
+          </script>
+-->
+          <div class="spotify-button" id="get-top-tracks">Get Top Tracks<br></div>
+          <div class="show-top-tracks" id="show-top-tracks"> </div>
+          <iframe style="display: none" id="spotifyTrack" width="50%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+          <br><br>
+          <div class="spotify-button recommendations" id="get-recommendations" style="display: none">Get Recommendations<br></div>
+          <div class="show-recommendations" id="recommendations-wrapper" style="display: none">
+            <table class="greenTable" align="center" style="text-align:center;">
+              <thead>
+                <tr>
+                  <th class="column1" style="text-align:center;">Song</th>
+                  <th class="column2" style="text-align:center;">Artist</th>
+                  <th class="column3" style="text-align:center;">Album</th>
+                </tr>
+              </thead>
+              <tbody id="recommendations-table">
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap-assets/js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- JS PLUGINS -->
+    <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="plugins/waypoints/jquery.waypoints.min.js"></script>
+    <script src="plugins/countTo/jquery.countTo.js"></script>
+    <script src="plugins/inview/jquery.inview.min.js"></script>
+    <script src="plugins/Lightbox/dist/js/lightbox.min.js"></script>
+    <script src="plugins/WOW/dist/wow.min.js"></script>
+    <!-- GOOGLE MAP -->
+    <!-- AIzaSyDbi84W3b2-Gqi6SI1bRLFWzsvQfvXGIIQ GOOGLE API KEY -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <script>
+    function getHashParams() {
+      var hashParams = {};
+      var e, r = /([^&;=]+)=?([^&;]*)/g,
+          q = window.location.hash.substring(1);
+      while ( e = r.exec(q)) {
+         hashParams[e[1]] = decodeURIComponent(e[2]);
+      }
+      return hashParams;
+    }
+
+    var parameters = getHashParams();
+
+    var access_token = parameters.access_token;
+
+    $(document).ready(function() {
+
+      var url = location.href;
+      // document.body.innerHTML += 'Web address: ' + url;
+
+      if (url.search('access_token') >= 0) {
+        $('.pre-login-message').hide();
+        $('.post-login-message').show();
+      }
+    });
+
+    $( "#get-top-tracks" ).one( "click", function() {getTopTracks(access_token);
+    });
+
+    $( "#get-recommendations" ).on( "click", function() {getRecommendations(access_token);
+    });
+
+    function getTopTracks(access_token) {
+      $.ajax({
+        url: 'https://api.spotify.com/v1/me/top/tracks?limit=10',
+        headers: {
+          'Authorization': 'Bearer ' + access_token
+        },
+        success: function(response) {
+          $(".recommendations").show();
+          mapOverSongs(response.items);
+          $("#spotifyTrack").attr("src", "https://open.spotify.com/embed/track/" + response.items[0].id);
+        }
+      });
+    }
+
+    function mapOverSongs(songs) {
+        $("#get-recommendations").show();
+
+        songs.map( function(song) {
+              var list = "<input type='checkbox' name='top-tracks' value='" +
+                      song.id + "'>" +
+                      "<a href='" + song.external_urls.spotify + "'>" +
+                      song.name +
+                      "</a> by " + "<a href='" + song.external_urls.spotify + "'>" + song.artists[0].name +
+                      "</a> from the album " + song.album.name +
+                      "<br><br>";
+              document.getElementById('show-top-tracks').innerHTML += list;
+              $("#spotifyTrack").show();
+        });
+      }
+
+      function getRecommendations(access_token) {
+          var checkboxes = document.getElementsByName('top-tracks');
+          var selected = "";
+          for (var i=0, n=checkboxes.length; i<n; i++) {
+              if (checkboxes[i].checked) {
+                  selected += checkboxes[i].value+",";
+              }
+          }
+          selected = selected.slice(0, -1);
+          $.ajax({
+              url: 'https://api.spotify.com/v1/recommendations?market=US&seed_tracks=' + selected + '&limit=10',
+              headers: {
+              'Authorization': 'Bearer ' + access_token
+              },
+              success: function(response) {
+                  mapOverRecommendations(response.tracks);
+              }
+          });
+      }
+
+      function mapOverRecommendations(recommendations) {
+        $("#recommendations-wrapper").show();
+        recommendations.map(function (song) {
+          var list =
+              '<tr><td class="column1"> <a onclick="playSelectionInPlayer(\'' + song.id + '\')">' + song.name + '</a></td><td class="column2">' + song.artists[0].name + '</td><td class="column3">' + song.album.name + '</td></tr>';
+          document.getElementById('recommendations-table').innerHTML += list;
+        });
+      }
+
+      function playSelectionInPlayer(selectionID) {
+        var embedlink = "https://open.spotify.com/embed/track/" + selectionID;
+        $("#spotifyTrack").attr('src', embedlink);
+        document.getElementById('spotifyTrack').contentWindow.location.reload();
+        }
+      </script>
+</body>
+
+</html>
